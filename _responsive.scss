@@ -1,0 +1,280 @@
+/* ========================= 
+   Browser Fixes
+========================= */
+
+// Write code here...
+
+
+
+/* ========================= 
+   Media Queries
+========================= */
+
+/* 
+
+@include responsive(xlarge-only) {  }
+@include responsive(desktop) {  } // Breakpoint 1
+@include responsive(laptop) {  }
+@include responsive(tablet-landscape) {  } // Breakpoint 2 - 1 col
+@include responsive(tablet-portrait) {  }
+@include responsive(phone-landscape) {  } // Breakpoint 3
+@include responsive(phone-portrait) {  }
+
+ */
+
+
+body {
+
+    // Base Typography Responsive Sizes
+    html, 
+    p,
+    a,
+    button,
+    input,
+    input[type=text], 
+    input[type=password], 
+    input[type=email], 
+    input[type=tel], 
+    input[type=date], 
+    input[type=month], 
+    input[type=week], 
+    input[type=time], 
+    input[type=number], 
+    input[type=search], 
+    textarea,
+    optgroup,
+    select,
+    // Added
+    .pp-content-post .pp-post-content {
+        font-family: $base-font-family;
+        font-size: $base-font-size;
+        line-height: $base-line-height;
+        font-weight: $base-font-weight;
+        text-transform: $base-font-caps;
+        letter-spacing: $base-letter-spacing;
+    }
+
+    h1.uabb-heading,
+    h1.fl-heading,
+    h1 {
+        font-family: $h1-font;
+        font-size: $h1-font-size;
+        line-height: $h1-line-height;
+        font-weight: $h1-weight;
+        text-transform: $h1-caps;
+        letter-spacing: $h1-letter-spacing;
+        
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+            font-size: ($h1-font-size) * $small-screen-multiplier;
+        }
+
+        // Breakpoint 3
+        @include responsive(phone-landscape) {
+            font-size: ($h1-font-size) * $xsmall-screen-multiplier;
+        }
+
+    }
+
+    h2.uabb-heading,
+    h2.fl-heading,
+    h2 {
+        font-family: $h2-font;
+        font-size: $h2-font-size;
+        line-height: $h2-line-height;
+        font-weight: $h2-weight;
+        text-transform: $h2-caps;
+        letter-spacing: $h2-letter-spacing;
+
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+            font-size: ($h2-font-size) * $small-screen-multiplier;
+        }
+
+        // Breakpoint 3
+        @include responsive(phone-landscape) {
+            font-size: ($h2-font-size) * $xsmall-screen-multiplier;
+        }
+    }
+
+    h3.uabb-heading,
+    h3.fl-heading,
+    h3.fl-callout-title,
+    h3.uabb-info-list-title,
+    h3 {
+        font-family: $h3-font;
+        font-size: $h3-font-size;
+        line-height: $h3-line-height;
+        font-weight: $h3-weight;
+        text-transform: $h3-caps;
+        letter-spacing: $h3-letter-spacing;
+
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+            font-size: ($h3-font-size) * $small-screen-multiplier;
+        }
+
+        // Breakpoint 3
+        @include responsive(phone-landscape) {
+            font-size: ($h3-font-size) * $xsmall-screen-multiplier;
+        }
+    }
+
+    h4.uabb-heading,
+    h4.fl-heading,
+    h4 {
+        font-family: $h4-font;
+        font-size: $h4-font-size;
+        line-height: $h4-line-height;
+        font-weight: $h4-weight;
+        text-transform: $h4-caps;
+        letter-spacing: $h4-letter-spacing;
+
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+            font-size: ($h4-font-size) * $small-screen-multiplier;
+        }
+
+        // Breakpoint 3
+        @include responsive(phone-landscape) {
+            font-size: ($h4-font-size) * $xsmall-screen-multiplier;
+        }
+    }
+
+    h5.uabb-heading,
+    h5.fl-heading,
+    h5 {
+        font-family: $h5-font;
+        font-size: $h5-font-size;
+        line-height: $h5-line-height;
+        font-weight: $h5-weight;
+        text-transform: $h5-caps;
+        letter-spacing: $h5-letter-spacing;
+
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+            font-size: ($h5-font-size) * $small-screen-multiplier;
+        }
+
+        // Breakpoint 3
+        @include responsive(phone-landscape) {
+            font-size: ($h5-font-size) * $xsmall-screen-multiplier;
+        }
+    }
+
+    h6.uabb-heading,
+    h6.fl-heading,
+    h6 {
+        font-family: $h6-font;
+        font-size: $h6-font-size;
+        line-height: $h6-line-height;
+        font-weight: $h6-weight;
+        text-transform: $h6-caps;
+        letter-spacing: $h6-letter-spacing;
+
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+            font-size: ($h6-font-size) * $small-screen-multiplier;
+        }
+
+        // Breakpoint 3
+        @include responsive(phone-landscape) {
+            font-size: ($h6-font-size) * $xsmall-screen-multiplier;
+        }
+    }
+
+    .fl-rich-text {
+
+        span {
+            font-size: inherit !important;
+        }
+
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+            text-align: $mobile-align;
+        }
+/* 
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+            font-size: ($base-font-size) * $small-screen-multiplier;
+        }
+
+        // Breakpoint 3
+        @include responsive(phone-landscape) {
+            font-size: ($base-font-size) * $xsmall-screen-multiplier;
+        } */
+    }
+
+     .fl-heading {
+
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+            text-align: $mobile-align;
+        }
+        
+    }
+
+
+    // Buttons
+    .fl-button-wrap,
+    .uabb-button-wrap {
+
+        // Breakpoint 2
+        @include responsive(tablet-landscape) { text-align: $mobile-align !important; }
+
+        a {
+            height: auto !important;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) { padding: 14px 20px 10px; }
+        }
+
+    }
+
+    // Powerpack modules
+    .pp-list-item {
+
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+
+            .pp-infolist-description p {
+                    text-align: left !important;
+            }
+
+        }
+    }
+
+    // Ultimate addons
+    .infobox-has-icon {
+        
+        // Breakpoint 2
+        @include responsive(tablet-landscape) {
+
+            .uabb-infobox-text p,
+            .uabb-infobox-title {
+                text-align: left !important;
+            }
+
+        }
+
+    }
+
+    .fl-module-adv-testimonials {
+        
+        // Breakpoint 1
+        @include responsive(desktop) { 
+
+            .uabb-testimonial {
+                padding: 20px 15px !important; 
+            }
+
+        }
+
+        // Breakpoint 2
+        @include responsive(tablet-landscape) { margin-bottom: 20px; }
+
+    }
+
+
+}
+

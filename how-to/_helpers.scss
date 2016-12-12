@@ -1,0 +1,71 @@
+/* ========================= 
+   Tips For Using SCSS Styles
+========================= */
+
+
+/* ========================= 
+   ~ Nesting
+========================= */
+
+// E.g. This link style...
+
+a {
+    color: #000000;
+
+    &:hover {
+        color: #999999;
+    }
+}
+
+// ...will compile as:
+
+a {
+    color: #000000;
+}
+a:hover {
+    color: #999999;
+}
+
+
+/* ========================= 
+   ~ Properties
+========================= */
+
+// Use variables instead of #hexcodes, sizes, etc.
+$column: 40px;
+$gutter: 44px;
+$grid-columns: 12;
+$max-width: em(960);
+$red: #ff0000;
+
+// E.g. Using a variable:
+p {
+    color: $red;
+}
+
+// Automatically include animation and transition properties:
+@include animation(scale 1.0s ease-in, slide 2.0s ease);
+@include transition(opacity 1.0s ease-in 0s, width 2.0s ease-in 2s);
+
+// E.g. this link will transition from normal color to the hover color:
+a {
+    color: #000000;
+    @include transition(color 1.0s);
+
+    &:hover {
+        color: #999999;
+    }
+}
+
+// Automatically search in a folder for a retina image to display:
+@include retina-image("../img-logo", 100px 200px);
+
+// Include a clearfix after a floated layout:
+@include clearfix;
+
+// Backgrounds
+@include background(lineargradient(red, green) left repeat, radial-gradient(red, orange) left repeat);
+@include background-image(url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+@include linear-gradient(to top, #8fdce5, #3dc3d1);
+
+

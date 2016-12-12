@@ -1,0 +1,59 @@
+/* ========================= 
+   Header Display
+========================= */
+
+@if $show-header == false {
+
+    .fl-page-header-primary {
+        display: none;
+    }
+
+}
+
+
+
+
+/* ========================= 
+   Container Breakpoints
+========================= */
+
+// Default container size on desktop
+.fl-row-fixed-width {
+    max-width: 1100px;
+    
+    // Breakpoint 1
+    @include responsive(desktop) { max-width: $bp1-container-size !important; }
+    
+    // Breakpoint 2
+    @include responsive(tablet-landscape) { 
+        max-width: $bp2-container-size !important;
+
+        // Center content on mobile
+        .fl-icon-group, p {
+            text-align: center !important;
+        }
+        .fl-photo {
+            margin: auto !important;
+            display: table;
+        }
+    }
+    
+    // Breakpoint 3
+    @include responsive(phone-landscape) { 
+        max-width: $bp3-container-size !important;
+
+        .fl-module-content {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .fl-col-content {
+            border-left: none !important;
+            border-right: none !important;
+            margin: 0 !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+
+    }
+}

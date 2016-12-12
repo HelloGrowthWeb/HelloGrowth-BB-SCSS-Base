@@ -1,0 +1,1003 @@
+/* ========================= 
+   Class Set Up
+========================= */
+
+/* 
+
+@include responsive(xlarge-only) {  }
+@include responsive(desktop) {  } // Breakpoint 1
+@include responsive(laptop) {  }
+@include responsive(tablet-landscape) {  } // Breakpoint 2
+@include responsive(tablet-portrait) {  }
+@include responsive(phone-landscape) {  } // Breakpoint 3
+@include responsive(phone-portrait) {  }
+
+ */
+
+body {
+
+    .xlarge {
+
+        h1.uabb-heading,
+        h1.fl-heading,
+        h1 {
+            font-size: $xlarge-multiplier * $h1-font-size;
+            line-height: $h1-line-height * $xlarge-lheight-multiplier;
+
+            
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xlarge-multiplier * $h1-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xlarge-multiplier * $h1-font-size) * $xsmall-screen-multiplier;
+            }
+
+        }
+
+        h2.uabb-heading,
+        h2.fl-heading,
+        h3 {
+            font-size: $xlarge-multiplier * $h2-font-size;
+            line-height: $h2-line-height * $xlarge-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xlarge-multiplier * $h2-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xlarge-multiplier * $h2-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h3.uabb-heading,
+        h3.fl-heading,
+        h3.fl-callout-title,
+        h3.uabb-info-list-title,
+        h3 {
+            font-size: $xlarge-multiplier * $h3-font-size;
+            line-height: $h3-line-height * $xlarge-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xlarge-multiplier * $h3-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xlarge-multiplier * $h3-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h4.uabb-heading,
+        h4.fl-heading,
+        h4 {
+            font-size: $xlarge-multiplier * $h4-font-size;
+            line-height: $h4-line-height * $xlarge-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xlarge-multiplier * $h4-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xlarge-multiplier * $h4-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h5.uabb-heading,
+        h5.fl-heading,
+        h5 {
+            font-size: $xlarge-multiplier * $h5-font-size;
+            line-height: $h5-line-height * $xlarge-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xlarge-multiplier * $h5-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xlarge-multiplier * $h5-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h6.uabb-heading,
+        h6.fl-heading,
+        h6 {
+            font-size: $xlarge-multiplier * $h6-font-size;
+            line-height: $h6-line-height * $xlarge-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xlarge-multiplier * $h6-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xlarge-multiplier * $h6-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        p,
+        a,
+        button,
+        input,
+        optgroup,
+        select,
+        textarea,
+        .fl-rich-text,
+        // Added
+        .pp-content-post .pp-post-content {
+            font-size: $xlarge-multiplier * $base-font-size;
+            line-height: $base-line-height * $xlarge-lheight-multiplier;
+
+            span {
+                font-size: inherit !important;
+            }
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xlarge-multiplier * $base-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xlarge-multiplier * $base-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+    }
+
+    .large {
+
+        h1.uabb-heading,
+        h1.fl-heading,
+        h1 {
+            font-size: $large-multiplier * $h1-font-size;
+            line-height: $h1-line-height * $large-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($large-multiplier * $h1-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($large-multiplier * $h1-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h2.uabb-heading,
+        h2.fl-heading,
+        h2 {
+            font-size: $large-multiplier * $h2-font-size;
+            line-height: $h2-line-height * $large-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($large-multiplier * $h2-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($large-multiplier * $h2-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h3.uabb-heading,
+        h3.fl-heading,
+        h3.fl-callout-title,
+        h3.uabb-info-list-title,
+        h3 {
+            font-size: $large-multiplier * $h3-font-size;
+            line-height: $h3-line-height * $large-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($large-multiplier * $h3-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($large-multiplier * $h3-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h4.uabb-heading,
+        h4.fl-heading,
+        h4 {
+            font-size: $large-multiplier * $h4-font-size;
+            line-height: $h4-line-height * $large-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($large-multiplier * $h4-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($large-multiplier * $h4-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h5.uabb-heading,
+        h5.fl-heading,
+        h5 {
+            font-size: $large-multiplier * $h5-font-size;
+            line-height: $h5-line-height * $large-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($large-multiplier * $h5-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($large-multiplier * $h5-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h6.uabb-heading,
+        h6.fl-heading,
+        h6 {
+            font-size: $large-multiplier * $h6-font-size;
+            line-height: $h6-line-height * $large-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($large-multiplier * $h6-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($large-multiplier * $h6-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        p,
+        a,
+        button,
+        input,
+        optgroup,
+        select,
+        textarea,
+        .fl-rich-text,
+        // Added
+        .pp-content-post .pp-post-content {
+            font-size: $large-multiplier * $base-font-size;
+            line-height: $base-line-height * $large-lheight-multiplier;
+
+            span {
+                font-size: inherit !important;
+            }
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($large-multiplier * $base-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($large-multiplier * $base-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+    }
+
+    .small {
+
+        h1.uabb-heading,
+        h1.fl-heading,
+        h1 {
+            font-size: $small-multiplier * $h1-font-size;
+            line-height: $h1-line-height * $small-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($small-multiplier * $h1-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($small-multiplier * $h1-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h2.uabb-heading,
+        h2.fl-heading,
+        h2 {
+            font-size: $small-multiplier * $h2-font-size;
+            line-height: $h2-line-height * $small-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($small-multiplier * $h2-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($small-multiplier * $h2-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h3.uabb-heading,
+        h3.fl-heading,
+        h3.fl-callout-title,
+        h3.uabb-info-list-title,
+        h3 {
+            font-size: $small-multiplier * $h3-font-size;
+            line-height: $h3-line-height * $small-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($small-multiplier * $h3-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($small-multiplier * $h3-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h4.uabb-heading,
+        h4.fl-heading,
+        h4 {
+            font-size: $small-multiplier * $h4-font-size;
+            line-height: $h4-line-height * $small-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($small-multiplier * $h4-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($small-multiplier * $h4-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h5.uabb-heading,
+        h5.fl-heading,
+        h5 {
+            font-size: $small-multiplier * $h5-font-size;
+            line-height: $h5-line-height * $small-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($small-multiplier * $h5-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($small-multiplier * $h5-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h6.uabb-heading,
+        h6.fl-heading,
+        h6 {
+            font-size: $small-multiplier * $h6-font-size;
+            line-height: $h6-line-height * $small-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($small-multiplier * $h6-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($small-multiplier * $h6-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        p,
+        a,
+        button,
+        input,
+        optgroup,
+        select,
+        textarea,
+        .fl-rich-text,
+        // Added
+        .pp-content-post .pp-post-content {
+            font-size: $small-multiplier * $base-font-size;
+            line-height: $base-line-height * $small-lheight-multiplier;
+
+            span {
+                font-size: inherit !important;
+            }
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($small-multiplier * $base-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($small-multiplier * $base-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+    }
+
+    .xsmall {
+
+        h1.uabb-heading,
+        h1.fl-heading,
+        h1 {
+            font-size: $xsmall-multiplier * $h1-font-size;
+            line-height: $h1-line-height * $xsmall-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xsmall-multiplier * $h1-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xsmall-multiplier * $h1-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h2.uabb-heading,
+        h2.fl-heading,
+        h2 {
+            font-size: $xsmall-multiplier * $h2-font-size;
+            line-height: $h2-line-height * $xsmall-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xsmall-multiplier * $h2-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xsmall-multiplier * $h2-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h3.uabb-heading,
+        h3.fl-heading,
+        h3.fl-callout-title,
+        h3.uabb-info-list-title,
+        h3 {
+            font-size: $xsmall-multiplier * $h3-font-size;
+            line-height: $h3-line-height * $xsmall-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xsmall-multiplier * $h3-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xsmall-multiplier * $h3-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h4.uabb-heading,
+        h4.fl-heading,
+        h4 {
+            font-size: $xsmall-multiplier * $h4-font-size;
+            line-height: $h4-line-height * $xsmall-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xsmall-multiplier * $h4-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xsmall-multiplier * $h4-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h5.uabb-heading,
+        h5.fl-heading,
+        h5 {
+            font-size: $xsmall-multiplier * $h5-font-size;
+            line-height: $h5-line-height * $xsmall-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xsmall-multiplier * $h5-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xsmall-multiplier * $h5-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        h6.uabb-heading,
+        h6.fl-heading,
+        h6 {
+            font-size: $xsmall-multiplier * $h6-font-size;
+            line-height: $h6-line-height * $xsmall-lheight-multiplier;
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xsmall-multiplier * $h6-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xsmall-multiplier * $h6-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+
+        p,
+        a,
+        button,
+        input,
+        optgroup,
+        select,
+        textarea,
+        .fl-rich-text,
+        // Added
+        .pp-content-post .pp-post-content {
+            font-size: $xsmall-multiplier * $base-font-size;
+            line-height: $base-line-height * $xsmall-lheight-multiplier;
+
+            span {
+                font-size: inherit !important;
+            }
+
+            // Breakpoint 2
+            @include responsive(tablet-landscape) {
+                font-size: ($xsmall-multiplier * $base-font-size) * $small-screen-multiplier;
+            }
+
+            // Breakpoint 3
+            @include responsive(phone-landscape) {
+                font-size: ($xsmall-multiplier * $base-font-size) * $xsmall-screen-multiplier;
+            }
+        }
+    }
+}
+
+.default {
+
+    .fl-button {
+        color: $btn-default-color !important;
+        background-color: $btn-default-bg !important;
+        border: 1px solid $btn-default-border !important;
+        font-weight: $btn-font-weight !important;
+        border-radius: $border-radius-base !important;
+    }
+
+}
+
+.primary {
+
+    .fl-button {
+        color: $btn-primary-color !important;
+        background-color: $btn-primary-bg !important;
+        border: 1px solid $btn-primary-border !important;
+        font-weight: $btn-font-weight !important;
+        border-radius: $border-radius-base !important;
+    }
+
+}
+
+.success {
+
+    .fl-module-content {
+        background-color: $state-success-bg !important;
+        border: 1px solid $state-success-border !important;
+
+        p {
+            color: $state-success-text !important;
+        }
+    }
+
+    .fl-button {
+        color: $btn-success-color !important;
+        background-color: $btn-success-bg !important;
+        border: 1px solid $btn-success-border !important;
+        font-weight: $btn-font-weight !important;
+        border-radius: $border-radius-base !important;
+    }
+}
+
+.info {
+
+    .fl-module-content { 
+        background-color: $state-info-bg !important;
+        border: 1px solid $state-info-border !important;
+
+        p {
+            color: $state-info-text !important;
+        }
+    }
+
+    .fl-button {
+        color: $btn-info-color !important;
+        background-color: $btn-info-bg !important;
+        border: 1px solid $btn-info-border !important;
+        font-weight: $btn-font-weight !important;
+        border-radius: $border-radius-base !important;
+    }
+}
+
+.warning {
+
+    .fl-module-content {
+        background-color: $state-warning-bg !important;
+        border: 1px solid $state-warning-border !important;
+
+        p {
+            color: $state-warning-text !important;
+        }
+    }
+
+    .fl-button {
+        color: $btn-warning-color !important;
+        background-color: $btn-warning-bg !important;
+        border: 1px solid $btn-warning-border !important;
+        font-weight: $btn-font-weight !important;
+        border-radius: $border-radius-base !important;
+    }
+}
+
+.danger {
+
+    .fl-module-content {
+        background-color: $state-danger-bg !important;
+        border: 1px solid $state-danger-border !important;
+
+        p {
+            color: $state-danger-text !important;
+        }
+    }
+
+    .fl-button {
+        color: $btn-danger-color !important;
+        background-color: $btn-danger-bg !important;
+        border: 1px solid $btn-danger-border !important;
+        font-weight: $btn-font-weight !important;
+        border-radius: $border-radius-base !important;
+    }
+}
+
+.disabled {
+
+    .fl-button {
+        color: $btn-link-disabled-color !important;
+    }
+}
+
+
+// Floats
+.float-left {
+
+    float: left !important;
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+}
+
+.float-right {
+
+    float: right !important;
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+}
+
+.float-left:nth-of-type(n+2), 
+.float-right:nth-of-type(n+2),
+.float-right + .float-left,
+.float-left + .float-right {
+
+    &:before,
+    &:after {
+        content: "";
+        display: table; 
+    }
+
+    &:after {
+        clear: both;
+    }
+    
+}
+
+// Positions
+.center {
+    width: 100%;
+
+    & > div {
+        margin-left: auto;
+        margin-right: auto;
+        display: table !important;
+    }
+
+}
+
+// Fixed Widths
+.w50 {
+    width: 50px !important;
+    max-width: 50px !important;
+}
+.w100 {
+    width: 100px !important;
+    max-width: 100px !important;
+}
+.w200 {
+    width: 200px !important;
+    max-width: 200px !important;
+}
+.w300 {
+    width: 300px !important;
+    max-width: 300px !important;
+}
+.w400 {
+    width: 400px !important;
+    max-width: 400px !important;
+}
+.w500 {
+    width: 500px !important;
+    max-width: 500px !important;
+}
+.w600 {
+    width: 600px !important;
+    max-width: 600px !important;
+}
+.w700 {
+    width: 700px !important;
+    max-width: 700px !important;
+}
+.w800 {
+    width: 800px !important;
+    max-width: 800px !important;
+}
+.w900 {
+    width: 900px !important;
+    max-width: 900px !important;
+}
+.w1000 {
+    width: 1000px !important;
+    max-width: 1000px !important;
+}
+.w1100 {
+    width: 1100px !important;
+    max-width: 1100px !important;
+}
+.w1200 {
+    width: 1200px !important;
+    max-width: 1200px !important;
+}
+.w1300 {
+    width: 1300px !important;
+    max-width: 1300px !important;
+}
+.w1400 {
+    width: 1400px !important;
+    max-width: 1400px !important;
+}
+
+// Max Widths
+.mw100 {
+    max-width: 100px !important;
+    
+    @include responsive(phone-landscape) {
+        max-width: 100% !important;
+    }
+}
+.mw200 {
+    max-width: 200px !important;
+    
+    @include responsive(phone-landscape) {
+        max-width: 100% !important;
+    }
+}
+.mw300 {
+    max-width: 300px !important;
+    
+    @include responsive(phone-landscape) {
+        max-width: 100% !important;
+    }
+}
+.mw400 {
+    max-width: 400px !important;
+    
+    @include responsive(phone-landscape) {
+        max-width: 100% !important;
+    }
+}
+.mw500 {
+    max-width: 500px !important;
+}
+.mw600 {
+    max-width: 600px !important;
+}
+.mw700 {
+    max-width: 700px !important;
+}
+.mw800 {
+    max-width: 800px !important;
+}
+.mw900 {
+    max-width: 900px !important;
+}
+.mw1000 {
+    max-width: 1000px !important;
+}
+.mw1100 {
+    max-width: 1100px !important;
+}
+.mw1200 {
+    max-width: 1200px !important;
+}
+.mw1300 {
+    max-width: 1300px !important;
+}
+.mw1400 {
+    max-width: 1400px !important;
+}
+.auto {
+    width: auto !important;
+}
+
+// heights
+.mh25 div,
+.mh25 img {
+    max-height: 25px !important;
+}
+.mh50 div,
+.mh50 img {
+    max-height: 50px !important;
+}
+.mh75 div,
+.mh75 img {
+    max-height: 75px !important;
+}
+.mh100 div,
+.mh100 img {
+    max-height: 100px !important;
+}
+.mh200 div,
+.mh200 img {
+    max-height: 200px !important;
+}
+.mh300 div,
+.mh300 img {
+    max-height: 300px !important;
+}
+.mh400 div,
+.mh400 img {
+    max-height: 400px !important;
+}
+.mh500 div,
+.mh500 img {
+    max-height: 500px !important;
+}
+.mh600 div,
+.mh600 img {
+    max-height: 600px !important;
+}
+.mh700 div,
+.mh700 img {
+    max-height: 700px !important;
+}
+.mh800 div,
+.mh800 img {
+    max-height: 800px !important;
+}
+
+
+// Aspect ratios
+.r16x9 {
+    &.fl-module {
+        @include aspect-ratio(16 9);
+    }
+    &.fl-col {
+        .fl-module-photo,
+        .pp-modal-trigger {
+            @include aspect-ratio(16 9);
+        }
+        @include responsive(tablet-landscape) {
+            @include aspect-ratio(16 9);
+        }
+    }
+}
+.r4x3 {
+    &.fl-module {
+        @include aspect-ratio(4 3);
+    }
+    &.fl-col {
+        .fl-module-photo,
+        .pp-modal-trigger {
+            @include aspect-ratio(4 3);
+        }
+        @include responsive(tablet-landscape) {
+            @include aspect-ratio(4 3);
+        }
+    }
+}
+.r2x1 {
+    &.fl-module {
+        @include aspect-ratio(2 1);
+    }
+    &.fl-col {
+        .fl-module-photo,
+        .pp-modal-trigger {
+            @include aspect-ratio(2 1);
+        }
+        @include responsive(tablet-landscape) {
+            @include aspect-ratio(2 1);
+        }
+    }
+}
+.r1x1 {
+    &.fl-module {
+        @include aspect-ratio(1 1);
+    }
+    &.fl-col {
+        .fl-module-photo,
+        .pp-modal-trigger {
+            @include aspect-ratio(1 1);
+        }
+        @include responsive(tablet-landscape) {
+            @include aspect-ratio(1 1);
+        }
+    }
+}
+
+
+// Opacity
+.opacity-100 {
+    opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+.opacity-90 {
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+.opacity-80 {
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+.opacity-70 {
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+.opacity-60 {
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+.opacity-50 {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+.opacity-40 {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+.opacity-30 {
+    opacity: 0.3;
+    filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+.opacity-20 {
+    opacity: 0.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+}
+.opacity-10 {
+    opacity: 0.1;
+    filter: alpha(opacity=10); /* For IE8 and earlier */
+}
+.opacity-0 {
+    opacity: 0;
+    filter: alpha(opacity=0); /* For IE8 and earlier */
+}
+
+
+
+
+
+
+

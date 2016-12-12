@@ -1,0 +1,148 @@
+/* ========================= 
+   Functions
+========================= */
+
+// Function: Media query responsiveness
+// Useage: @include responsive(desktops) { width: 100%;}
+@mixin responsive($media) {
+    @if $media == xlarge-only {
+        @media only screen and (min-width : $desktop + 1) { @content; }
+    }
+    @else if $media == desktop {
+        @media only screen and (max-width : $desktop) { @content; }
+    }
+    @else if $media == laptop {
+        @media only screen and (max-width : $laptop) { @content; }
+    }
+    @else if $media == tablet-landscape {
+        @media only screen and (max-width : $tablet-landscape) { @content; }
+    }
+    @else if $media == tablet-portrait {
+        @media only screen and (max-width : $tablet-portrait) { @content; }
+    }
+    @else if $media == phone-landscape {
+        @media only screen and (max-width : $phone-landscape) { @content; }
+    }
+    @else if $media == phone-portrait {
+        @media only screen and (max-width : $phone-portrait) { @content; }
+    }
+}
+
+// Function: default properities for pseudo elements :before and :after
+// Usage: div::after { @include pseudo; }
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// Function: Generate CSS Triangles
+// Usage: @include css-triangle($color: red, $direction: up, $size: 14px);
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
+    @include pseudo($pos: $position);
+    width: 0;
+    height: 0;
+    @if $round {
+        border-radius: 3px;
+    }
+    @if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+        margin-top: 0 - round( $size / 2.5 );
+    } @else if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+        margin-bottom: 0 - round( $size / 2.5 );
+    } @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        margin-right: -$size;
+    } @else if  $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        margin-left: -$size;
+    }
+}
+
+// Function: Edit the placeholder style of an element
+// Usage: @include input-placeholder{ color: red; };
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+// Function: Maintain a pixel aspect ratio for divs
+// Usage: .sixteen-nine { @include aspect-ratio(16 9, ".fl-photo"); }, .sixteen-nine { @include aspect-ratio(16 9, img); }, .sixteen-nine { @include aspect-ratio(16 9, "&--fluid"); }
+@mixin aspect-ratio($ratio: 1 1, $selector: "> :first-child") {
+    $selector: unquote($selector);
+
+    padding-bottom: percentage(nth($ratio, 2) / nth($ratio, 1));
+    position: relative;
+
+    #{$selector},
+    .fl-col-content,
+    .fl-module-photo,
+    .fl-photo,
+    .fl-photo-content,
+    .fl-photo-content a
+    /* .fl-photo-img */ {
+        left: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100% !important;
+        overflow: hidden;
+    }
+
+    img {
+        min-width: 100%;
+        min-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+
+// Function: Transitions
+// Usage: @include transition(color 0.3s);
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+

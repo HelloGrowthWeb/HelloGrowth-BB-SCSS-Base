@@ -1,0 +1,40 @@
+/* ========================= 
+   Custom Media Queries
+========================= */
+
+/* 
+
+@include responsive(xlarge-only) {  }
+@include responsive(desktop) {  } // Breakpoint 1
+@include responsive(laptop) {  }
+@include responsive(tablet-landscape) {  } // Breakpoint 2 - 1 col
+@include responsive(tablet-portrait) {  }
+@include responsive(phone-landscape) {  } // Breakpoint 3
+@include responsive(phone-portrait) {  }
+
+ */
+
+
+// Mobile Styles
+.mobile-hide {
+    display: none !important;
+}
+
+.mobile-right {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+.mobile-left {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+    
+// Center mobile links
+.fl-menu .menu-item {
+
+    // Breakpoint 2
+    @include responsive(tablet-landscape) { text-align: center; }
+        
+}

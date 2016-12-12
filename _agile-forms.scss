@@ -1,0 +1,97 @@
+#agile-form {
+    max-width: none !important;
+    width: 100%;
+
+    legend {
+        display: none;
+    }
+
+    .agile-group  {
+        margin-bottom: 20px;
+
+        .agile-field {
+            width: 100% !important;
+            position: relative;
+
+            .agile-input-group {
+                display: flex;
+                justify-content: center;
+            }
+
+            input,
+            textarea,
+            select,
+            .agile-group-addon {
+                border-radius: 0;
+                padding: 20px 12px !important;
+                height: auto;
+                background-color: #eee;
+                margin-bottom: 10px;
+                font-size: 14px;
+                color: #000;
+                border: none;
+                border-left: 4px solid $accent;
+                font-size: 16px;
+                margin: 0;
+                line-height: 1.4;
+                @include input-placeholder { color: #000; }
+
+                &:focus {
+                    background-color: #fafafa;
+                    border-left: 4px solid $accent;
+                }
+            }
+
+            .agile-group-addon {
+                background-color: $accent !important;
+                color: #fff !important;
+                text-transform: uppercase;
+                font-size: 12px !important;
+                letter-spacing: 1px;
+                line-height: 22px !important;
+                border-top: 1px solid $accent;
+                border-right: 1px solid $accent;
+                border-bottom: 1px solid $accent;
+            }
+
+            textarea {
+                height: 140px;
+            }
+
+            select {
+                height: 64px;
+            }
+        }
+
+        .agile-button {
+            border-radius: 3px !important;
+            font-size: 20px !important;
+            height: auto !important;
+            background-color: $accent !important;
+            padding: 14px 28px !important;
+            border: none !important;
+            @include transition(background 0.3s)
+
+            &:hover {
+               background-color: darken($accent, 10%) !important;
+            }
+        }
+        
+        // Overwrite border thing
+        .agile-group-addon + input {
+            border-left: none !important;
+        }
+    }
+
+    .required-control .agile-field:after {
+        content: '*';
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        color: $required;
+        font-size: 32px;
+        line-height: 1;
+        font-family: $merriweather;
+    }
+}

@@ -1,0 +1,50 @@
+/* ========================= 
+   Global Set Up
+========================= */
+
+body {
+    background-color: $body-bg;
+    color: $text-color;
+
+    a {
+        color: $link-color;
+        text-decoration: $link-hover-decoration;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $link-hover-color;
+            text-decoration: $link-hover-decoration;
+        }
+    }
+    
+    // Menu Items shouldnt have underlines
+    .menu-item a {
+        text-decoration: none;
+    }
+}
+
+
+// No Border on Menu-Only Nav
+.fl-page-nav-no-header {
+
+    .fl-page-nav-wrap {
+        border: none;
+    }
+    .navbar-toggle {
+        margin-top: 10px !important;
+    }
+    
+}
+
+// Button animations
+.fl-button,
+.uabb-button,
+a {
+    @include transition(color 0.3s);
+}
+
+
